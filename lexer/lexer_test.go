@@ -1,9 +1,8 @@
 package lexer
 
 import (
+	"dumbInterpreter/token"
 	"testing"
-
-	"github.com/Hayder10/dumbGoInterpreter/token"
 )
 
 func TestNextToken(t *testing.T) {

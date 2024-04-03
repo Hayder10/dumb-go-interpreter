@@ -1,3 +1,3 @@
-module github.com/Hayder10/dumbGoInterpreter
+module dumbInterpreter
 
 go 1.22.0
