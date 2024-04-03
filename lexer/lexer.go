@@ -2,6 +2,7 @@ package lexer
 
 import (
 	"dumbInterpreter/token"
+	"fmt"
 )
 
 type Lexer struct {
@@ -14,6 +15,7 @@ type Lexer struct {
 func New(input string) *Lexer {
 	l := &Lexer{input: input}
 	l.readChar()
+	fmt.Println(input)
 	return l
 }
 
