@@ -1,6 +1,8 @@
 package lexer
 
-import "dumbInterpreter/token"
+import (
+	"dumbInterpreter/token"
+)
 
 type Lexer struct {
 	input        string
@@ -11,6 +13,7 @@ type Lexer struct {
 
 func New(input string) *Lexer {
 	l := &Lexer{input: input}
+	l.readChar()
 	return l
 }
 
@@ -26,7 +29,6 @@ func (l *Lexer) readChar() {
 
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
-
 	switch l.ch {
 	case '=':
 		tok = newToken(token.ASSIGN, l.ch)
